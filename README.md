@@ -1,0 +1,1 @@
+Developed an Android app in Java using Google ML Kit and the Handwriting Recognition API to classify hand-drawn letters and words in real time, integrating on-device ML inference into a fully functional native mobile game. 
