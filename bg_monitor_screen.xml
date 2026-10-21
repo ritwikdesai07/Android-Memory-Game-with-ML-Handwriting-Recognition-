@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- DEBUG: base phosphor screen. -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="6dp" />
+            <solid android:color="#050F05" />
+            <stroke
+                android:width="2dp"
+                android:color="#00FF41" />
+        </shape>
+    </item>
+
+    <!-- DEBUG: scanline sheen. -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="6dp" />
+            <gradient
+                android:angle="270"
+                android:centerColor="#00000000"
+                android:centerY="10%"
+                android:endColor="#08000000"
+                android:startColor="#08FFFFFF"
+                android:type="linear" />
+        </shape>
+    </item>
+
+    <!-- DEBUG: slight curved glass highlight. -->
+    <item android:bottom="120dp">
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="6dp"
+                android:topRightRadius="6dp" />
+            <gradient
+                android:angle="90"
+                android:endColor="#00000000"
+                android:startColor="#22FFFFFF"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

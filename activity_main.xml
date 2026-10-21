@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cashTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_hud_chip_low_poly"
+                android:fontFamily="monospace"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="10dp"
+                android:textColor="#C9FFC2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="CASH $0" />
+
+            <TextView
+                android:id="@+id/statsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/bg_hud_chip_low_poly"
+                android:fontFamily="monospace"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="8dp"
+                android:textColor="#B4C2A1"
+                android:textSize="12sp"
+                tools:text="LVL 1 | HACKS 0 | AUTO 0" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/computerScene"
+            layout="@layout/view_computer_scene" />
+
+        <ProgressBar
+            android:id="@+id/memorizeProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginBottom="8dp"
+            android:max="1000"
+            android:progressDrawable="@drawable/memorize_progress_bg"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/phaseTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bg_hud_chip_low_poly"
+            android:fontFamily="monospace"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textColor="#CBFFC8"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="IDLE | AUTOHACKER $0/sec" />
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_hud_chip_low_poly"
+            android:fontFamily="monospace"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textColor="#A7C6A5"
+            android:textSize="12sp"
+            tools:text="Download the ink model, memorize the code, and draw each glyph in order." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/hackButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/hack_button_bg"
+                android:fontFamily="monospace"
+                android:paddingVertical="15dp"
+                android:textAllCaps="false"
+                android:textColor="@color/background_black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="&gt; HACK" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/flat_terminal_button_bg"
+                android:backgroundTint="@null"
+                android:fontFamily="monospace"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="14dp"
+                android:text="@string/button_back"
+                android:textAllCaps="false"
+                android:textColor="@color/neon_green"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvDebugRecognition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_hud_chip_low_poly"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="6dp"
+                android:text="Recognition: --"
+                android:textColor="#FF8F8F"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/flat_terminal_button_bg"
+                android:backgroundTint="@null"
+                android:fontFamily="monospace"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="14dp"
+                android:text="@string/button_clear"
+                android:textAllCaps="false"
+                android:textColor="@color/neon_green"
+                android:visibility="gone" />
+
+            <!-- FEATURE stored hint trigger for draw phase. -->
+            <Button
+                android:id="@+id/btnUseHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="#1C1C1C"
+                android:fontFamily="monospace"
+                android:text="HINT"
+                android:textColor="#00FF41"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/lockCharButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="monospace"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="6dp"
+                android:text="@string/button_lock_char"
+                android:textAllCaps="false"
+                android:textColor="@color/neon_green"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/upgradePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_upgrade_panel_low_poly"
+            android:elevation="12dp"
+            android:orientation="vertical"
+            android:paddingVertical="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:fontFamily="monospace"
+                android:text="@string/upgrades_title"
+                android:textColor="@color/neon_green"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/upgradeLockText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginHorizontal="12dp"
+                android:fontFamily="monospace"
+                android:text="@string/upgrade_lock"
+                android:textColor="@color/soft_green"
+                android:textSize="11sp" />
+
+            <HorizontalScrollView
+                android:id="@+id/upgradeScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:paddingHorizontal="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/upgradeContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- FEATURE overlay for passive income labels. -->
+    <FrameLayout
+        android:id="@+id/floatingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:elevation="10dp"
+        android:importantForAccessibility="no"
+        android:focusable="false" />
+
+</FrameLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- // VISUAL -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- // VISUAL -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#080808" />
+        </shape>
+    </item>
+
+    <!-- // VISUAL -->
+    <item
+        android:gravity="start|center_vertical"
+        android:right="-120dp">
+        <shape android:shape="oval">
+            <size
+                android:width="420dp"
+                android:height="620dp" />
+            <gradient
+                android:centerColor="#3AF5AE33"
+                android:endColor="#003AF5AE"
+                android:gradientRadius="310dp"
+                android:startColor="#AAFFB347"
+                android:type="radial" />
+        </shape>
+    </item>
+
+    <!-- // VISUAL -->
+    <item
+        android:gravity="end|center_vertical"
+        android:left="-180dp">
+        <shape android:shape="oval">
+            <size
+                android:width="520dp"
+                android:height="760dp" />
+            <gradient
+                android:centerColor="#10253A"
+                android:endColor="#0010253A"
+                android:gradientRadius="380dp"
+                android:startColor="#2A10253A"
+                android:type="radial" />
+        </shape>
+    </item>
+
+    <!-- // VISUAL -->
+    <item
+        android:gravity="bottom"
+        android:top="420dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:endColor="#16120F"
+                android:startColor="#0016120F" />
+        </shape>
+    </item>
+
+    <!-- // VISUAL -->
+    <item
+        android:gravity="bottom|center_horizontal"
+        android:bottom="18dp">
+        <shape android:shape="rectangle">
+            <size
+                android:width="320dp"
+                android:height="84dp" />
+            <corners android:radius="8dp" />
+            <gradient
+                android:angle="0"
+                android:centerColor="#1A1714"
+                android:endColor="#0B0B0B"
+                android:startColor="#2F2419" />
+        </shape>
+    </item>
+</layer-list>

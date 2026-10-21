@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="24dp"
+    android:viewportWidth="60"
+    android:viewportHeight="24">
+    <!-- DEBUG: trapezoid neck. -->
+    <path
+        android:fillColor="#1C1C1C"
+        android:pathData="M24,2 L36,2 L42,16 L18,16 Z" />
+    <!-- DEBUG: wide base. -->
+    <path
+        android:fillColor="#161616"
+        android:pathData="M8,18 C8,15.8 14,14 30,14 C46,14 52,15.8 52,18 C52,20.2 46,22 30,22 C14,22 8,20.2 8,18 Z" />
+</vector>

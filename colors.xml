@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_black">#0A0A0A</color>
+    <color name="panel_black">#121212</color>
+    <color name="crt_bezel">#1A1A1A</color>
+    <color name="neon_green">#00FF41</color>
+    <color name="glow_green">#39FF14</color>
+    <color name="soft_green">#8DFFAA</color>
+    <color name="dim_green">#1A4D2E</color>
+    <color name="warning_red">#FF003C</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>
